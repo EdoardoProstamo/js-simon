@@ -50,6 +50,9 @@ console.log(answesrFormElement);
 const instructionsElement = document.getElementById('instructions');
 console.log(instructionsElement);
 
+const inputFieldsElement = document.querySelectorAll('#answers-form .form-control');
+console.log(inputFieldsElement);
+
 //valore timer
 let time = 30;
 
@@ -92,8 +95,26 @@ const countDownId = setInterval(function(){
 
 }, 1000)
 
+//inserimento numeri by user
 
 
+answesrFormElement.addEventListener('submit', confirm);
+
+
+
+
+function confirm(e) {
+    e.preventDefault();
+    console.log('Invio form');
+
+    for (let i=0; i < inputFieldsElement.length; i++) {
+        const currentValue = inputFieldsElement.value[i];
+        console.log(currentValue);
+    }
+
+
+
+}
 
 
 
