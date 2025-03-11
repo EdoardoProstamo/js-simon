@@ -108,7 +108,7 @@ function confirm(e) {
     console.log('Invio form');
 
     for (let i=0; i < inputFieldsElement.length; i++) {
-        const currentValue = inputFieldsElement.value[i];
+        const currentValue = inputFieldsElement[i].value;
         console.log(currentValue);
     }
 
