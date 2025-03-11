@@ -71,6 +71,9 @@ const countDownId = setInterval(function(){
     
     if (time === 0) {
         clearInterval(countDownId);
+
+        //nascondere numeri
+        numbersListElement.classList.add('d-none');
     }
 
 
