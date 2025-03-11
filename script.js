@@ -41,6 +41,11 @@ const tot = 5;
 const numbersListElement = document.getElementById('numbers-list');
 console.log(numbersListElement);
 
+const countdownElement = document.getElementById('countdown');
+console.log(countdownElement);
+
+//valore timer
+let time = 30;
 
 //numeri iniziali che compariranno sullo schermo
 const numbers = generateRandomNumbers(min, max, tot);
@@ -57,7 +62,20 @@ for (let i=0; i < tot; i++) {
 numbersListElement.innerHTML = items;
 
 
+//timer
+countdownElement.innerText = time;
+//countdown
+const countDownId = setInterval(function(){
 
+    countdownElement.innerText = --time;
+    
+    if (time === 0) {
+        clearInterval(countDownId);
+    }
+
+
+
+}, 1000)
 
 
 
