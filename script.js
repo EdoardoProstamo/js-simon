@@ -32,6 +32,29 @@
 // countAnswesrFormElement.d-none = false;
 
 
+//const numeri
+const min = 1;
+const max = 50;
+const tot = 5;
+
+//numeri iniziali che compariranno sullo schermo
+const numbers = generateRandomNumbers(min, max, tot);
+console.log(numbers);
+
+let items = '';
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -44,14 +67,6 @@ function generateRandomNumbers (min, max, tot) {
         const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
         result.push(randomNumber);
     }
-
-
-
-
-
-
-
-
     return result;
 }
-console.log(generateRandomNumbers(1, 50, 5));
+
