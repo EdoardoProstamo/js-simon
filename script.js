@@ -37,11 +37,24 @@ const min = 1;
 const max = 50;
 const tot = 5;
 
+//elementi html
+const numbersListElement = document.getElementById('numbers-list');
+console.log(numbersListElement);
+
+
 //numeri iniziali che compariranno sullo schermo
 const numbers = generateRandomNumbers(min, max, tot);
 console.log(numbers);
 
 let items = '';
+
+for (let i=0; i < tot; i++) {
+
+    const currentNumber = numbers[i];
+    items += `<li>${currentNumber}</li>`;
+}
+
+numbersListElement.innerHTML = items;
 
 
 
