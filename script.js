@@ -44,6 +44,9 @@ console.log(numbersListElement);
 const countdownElement = document.getElementById('countdown');
 console.log(countdownElement);
 
+const answesrFormElement = document.getElementById('answers-form');
+console.log(answesrFormElement);
+
 //valore timer
 let time = 30;
 
@@ -74,6 +77,9 @@ const countDownId = setInterval(function(){
 
         //nascondere numeri
         numbersListElement.classList.add('d-none');
+
+        //mostrare form
+        answesrFormElement.classList.remove('d-none');
     }
 
 
