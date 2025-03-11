@@ -24,14 +24,6 @@
 //3.generazione numeri scritti dall'utente
 //4.inserimento numeri utente in un array
 
-//controllo:
-// int c=0;
-// for(int i=0;i<array.size();i++){
-// if(array[i]==array[i]){
-//     c++;
-//     array[i]
-// }
-// }
 
 
 // const countNumbersListElement = document.getElementById('numbers-list');
@@ -40,19 +32,26 @@
 // countAnswesrFormElement.d-none = false;
 
 
-let count = 10;
-let countdown = setInterval(function countdown(){
-    console.log(count);
 
-    count--;
 
-    if(count===-1){
-        console.log('TEMPO SCADUTO');
-        clearInterval(countdown);
+
+//array numeri
+function generateRandomNumbers (min, max, tot) {
+    const result = [];
+
+    //crea 5 numeri random
+    for (let i=0; i < tot; i++) {
+        const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
+        result.push(randomNumber);
     }
-}, 10_00)
 
-// const countContoAllaRovesciaElement = document.getElementById('countdown');
-// countContoAllaRovesciaElement.addEventListener(function(){
-//     countContoAllaRovesciaElement.fs-1 = 'countdown';
-// })
+
+
+
+
+
+
+
+    return result;
+}
+console.log(generateRandomNumbers(1, 50, 5));
