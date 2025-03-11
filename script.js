@@ -47,6 +47,9 @@ console.log(countdownElement);
 const answesrFormElement = document.getElementById('answers-form');
 console.log(answesrFormElement);
 
+const instructionsElement = document.getElementById('instructions');
+console.log(instructionsElement);
+
 //valore timer
 let time = 30;
 
@@ -80,6 +83,9 @@ const countDownId = setInterval(function(){
 
         //mostrare form
         answesrFormElement.classList.remove('d-none');
+
+        //istruzioni
+        instructionsElement.innerText = 'Inserire numeri';
     }
 
 
