@@ -156,6 +156,8 @@ function confirm(e) {
 
 console.log(rightAnswer);
 
+messageElement.innerText = `${rightAnswer.length} numeri indovinati`;
+
 
 
 
