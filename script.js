@@ -108,7 +108,10 @@ function confirm(e) {
     console.log('Invio form');
 
     for (let i=0; i < inputFieldsElement.length; i++) {
-        const currentValue = inputFieldsElement[i].value;
+
+        const currentElement = inputFieldsElement[i];
+
+        const currentValue = parseInt(currentElement.value);
         console.log(currentValue);
     }
 
