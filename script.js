@@ -53,6 +53,9 @@ console.log(instructionsElement);
 const inputFieldsElement = document.querySelectorAll('#answers-form .form-control');
 console.log(inputFieldsElement);
 
+const messageElement = document.getElementById('message');
+console.log(messageElement);
+
 //valore timer
 let time = 30;
 
@@ -129,7 +132,11 @@ function confirm(e) {
         }
     }
 
-    
+    if(userShot.length !== tot) {
+        console.log('Errore giocata');
+        messageElement.innerText = 'Risposta non valida';
+        return;
+    }
 
 
 
