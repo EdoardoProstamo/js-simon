@@ -121,8 +121,15 @@ function confirm(e) {
         //array numeri inseriti da user
         userShot.push(currentValue);
 
-        
+        //validazione numeri: fare in modo che vadano da 1 a 50
+        //must: essere valore numerico
+        //non essere un numero ripetuto(cioè già inserito)
+        if(currentValue >= min && currentValue <= max && !isNaN(currentValue) && !userShot.includes(currentValue)) {
+            userShot.push(currentValue);
+        }
     }
+
+    
 
 
 
