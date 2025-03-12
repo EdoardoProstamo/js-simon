@@ -132,6 +132,7 @@ function confirm(e) {
         }
     }
 
+    //elementi non corretti
     if(userShot.length !== tot) {
         console.log('Errore giocata');
         messageElement.innerText = 'Risposta non valida';
@@ -140,8 +141,20 @@ function confirm(e) {
 
 
 
+    //elementi corretti
+    const rightAnswer = [];
+
+    for (let i=0; i < userShot.length; i++) {
+
+        const currentGuess = userShot(i);
+
+        if(numbers.includes(currentGuess)) rightAnswer.push(currentGuess);
+
+    }
+
 }
 
+console.log(rightAnswer);
 
 
 
