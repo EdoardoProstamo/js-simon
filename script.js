@@ -107,12 +107,21 @@ function confirm(e) {
     e.preventDefault();
     console.log('Invio form');
 
+    //array numeri inseriti da user
+    const userShot = [];
+
     for (let i=0; i < inputFieldsElement.length; i++) {
 
         const currentElement = inputFieldsElement[i];
+        console.log(currentElement);
 
         const currentValue = parseInt(currentElement.value);
         console.log(currentValue);
+
+        //array numeri inseriti da user
+        userShot.push(currentValue);
+
+        
     }
 
 
